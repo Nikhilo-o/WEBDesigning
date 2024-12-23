@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIET News Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FBF6E9; /* Soft off-white */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #5DB996, #118B50); /* Green gradient */
+            color: white;
+            padding: 60px 30px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            animation: slideIn 1s ease-out;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            font-weight: 500;
+            animation: fadeIn 2s ease-out;
+        }
+
+        header img {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            height: 100px;
+            animation: bounce 2s infinite alternate;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #118B50; /* Deep Green */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 25px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 5px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: #E3F0AF; /* Soft yellow */
+            bottom: 0;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #E3F0AF;
+            transform: translateY(-5px);
+        }
+
+        nav a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?university,students') no-repeat center center/cover;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 150px 30px;
+            position: relative;
+            background-size: cover;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .hero h2 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: slideUp 1.5s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.6rem;
+            animation: fadeInUp 1.8s ease-out;
+        }
+
+        /* News Highlights Section */
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .highlight-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            overflow: hidden;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .highlight-card h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .highlight-card p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* About Us Section */
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #118B50; /* Deep Green */
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Upcoming Events Section */
+        section ul {
+            list-style: none;
+            margin-top: 20px;
+            padding: 0;
+            text-align: center;
+        }
+
+        section ul li {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        section ul li em {
+            color: #888;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #118B50; /* Deep Green */
+            color: white;
+            text-align: center;
+            padding: 30px;
+            box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer a {
+            color: #E3F0AF; /* Soft yellow */
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 1024px) {
+            .highlights {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            header h1 {
+                font-size: 3.5rem;
+            }
+
+            header p {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .highlights {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero h2 {
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1.4rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>KIET News Portal</h1>
+        <p>Your trusted source for news and updates from KIET Group of Institutions</p>
+        <img src="https://mserp.kiet.edu/Images/DEFAULT_BG/default_logo1.png" alt="KIET Logo">
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a> <!-- Added Home Button -->
+        <a href="sports.html">Sports</a>
+        <a href="innovations.html">Innovations</a>
+        <a href="technical-clubs.html">Technical Clubs</a>
+        <a href="drama.html">Drama</a>
+    </nav>
+
+    <div class="hero">
+        <h2>Welcome to KIET News Portal</h2>
+        <p>Stay updated with the latest events, achievements, and stories from the KIET community.</p>
+    </div>
+
+    <div class="container">
+        <!-- News Highlights Section -->
+        <section class="highlights">
+            <div class="highlight-card">
+                <h3>Annual Sports Day 2024</h3>
+                <p>Witness incredible performances as students compete in various sports events.</p>
+            </div>
+            <div class="highlight-card">
+                <h3>TechHackathon 2024</h3>
+                <p>Join us for an adrenaline-fueled coding marathon where innovation meets creativity.</p>
+            </div>
+            <div class="highlight-card">
+                <h3>Drama Club: Annual Play</h3>
+                <p>The KIET Drama Club presents its annual production, "Echoes of Silence." Don't miss it!</p>
+            </div>
+            <div class="highlight-card">
+                <h3>Alumni Meet 2024</h3>
+                <p>A day to reconnect, network, and celebrate the achievements of our alumni.</p>
+            </div>
+            <div class="highlight-card">
+                <h3>AI in Education: A Seminar</h3>
+                <p>Explore how Artificial Intelligence is revolutionizing education in this thought-provoking seminar.</p>
+            </div>
+            <div class="highlight-card">
+                <h3>Blood Donation Camp</h3>
+                <p>Contribute to a noble cause by participating in the KIET Blood Donation Camp.</p>
+            </div>
+            <div class="highlight-card">
+                <h3>KIET Cultural Festival 2024</h3>
+                <p>The annual cultural festival brings together students for a celebration of talent, music, and dance.</p>
+            </div>
+            <div class="highlight-card">
+                <h3>New Student Exchange Program Announced</h3>
+                <p>KIET introduces a new student exchange program with leading universities around the world to expand learning opportunities.</p>
+            </div>
+            <div class="highlight-card">
+                <h3>KIET Launches Start-Up Incubator</h3>
+                <p>As part of our commitment to fostering entrepreneurship, KIET has launched a new start-up incubator to support student-led ventures.</p>
+            </div>
+            <div class="highlight-card">
+                <h3>KIET Celebrates World Environment Day</h3>
+                <p>KIET celebrated World Environment Day by organizing tree planting activities and sustainability workshops for students.</p>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section>
+            <h2>About KIET</h2>
+            <p>KIET Group of Institutions, established in 1998, is a premier educational institute in India. Offering a range of undergraduate, postgraduate, and doctoral programs in various disciplines such as Engineering, Management, and Applied Sciences, KIET is dedicated to creating global leaders in education, innovation, and industry.</p>
+            <p>Located in Ghaziabad, Uttar Pradesh, KIET has a state-of-the-art campus, a world-class faculty, and a vast network of alumni excelling across industries worldwide.</p>
+        </section>
+
+        <!-- Upcoming Events Section -->
+        <section>
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li><strong>AI Workshop:</strong> A hands-on workshop for budding tech enthusiasts. <em>Jan 15, 2024</em></li>
+                <li><strong>Cultural Night:</strong> Celebrate diversity through music and dance performances. <em>Feb 10, 2024</em></li>
+                <li><strong>Startup Pitch:</strong> Showcasing entrepreneurial ideas. <em>Mar 25, 2024</em></li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>KIET Group of Institutions | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+</body>
+</html>

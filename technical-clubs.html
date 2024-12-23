@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIET Technical Clubs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FBF6E9; /* Soft off-white */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #5DB996, #118B50); /* Green gradient */
+            color: white;
+            padding: 60px 30px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        header img {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            height: 100px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #118B50; /* Deep Green */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 25px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: #E3F0AF;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?technology,engineering') no-repeat center center/cover;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 150px 30px;
+            background-size: cover;
+        }
+
+        .hero h2 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.6rem;
+        }
+
+        /* Technical Clubs Highlights Section */
+        .highlights {
+            margin: 50px 0;
+        }
+
+        .highlight-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .highlight-card h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .highlight-card p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .highlight-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #118B50; /* Deep Green */
+            color: white;
+            text-align: center;
+            padding: 30px;
+            box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer a {
+            color: #E3F0AF; /* Soft yellow */
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>KIET Technical Clubs</h1>
+        <p>Explore the technical clubs at KIET and the innovative projects they lead</p>
+        <img src="https://mserp.kiet.edu/Images/DEFAULT_BG/default_logo1.png" alt="KIET Logo">
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a> <!-- Home Button -->
+        <a href="sports.html">Sports</a>
+        <a href="innovations.html">Innovations</a>
+        <a href="technical-clubs.html">Technical Clubs</a> <!-- Current Page -->
+        <a href="drama.html">Drama</a>
+    </nav>
+
+    <div class="container">
+        <!-- Technical Clubs Highlights Section -->
+        <section class="highlights">
+            <!-- First Club Item -->
+            <div class="highlight-card">
+                <h3>Robotics Club</h3>
+                <p>The **Robotics Club** at KIET is dedicated to pushing the boundaries of automation, artificial intelligence, and robotics. This club brings together students passionate about building robots and exploring new robotic technologies. From autonomous bots to industrial robots, the club works on a variety of projects that are showcased in national and international competitions.</p><p>
+
+                    The club regularly organizes workshops, seminars, and training sessions to help students get hands-on experience with robotics and automation tools. Whether it’s building robots for competitions or conducting research on robot-human interaction, the Robotics Club plays a key role in advancing knowledge and skills in robotics at KIET.</p>
+                <img src="https://www.kiet.edu/uploads/media/club_gallery_image/5135498.jpg" alt="Robotics Club Image"width="800" height="500">
+            </div>
+
+            <!-- Second Club Item -->
+            <div class="highlight-card">
+                <h3>Programming Club</h3>
+                <p>The **Programming Club** at KIET fosters a community of coding enthusiasts who come together to solve problems, participate in hackathons, and develop innovative software solutions. This club provides a platform for students to learn various programming languages, algorithms, and data structures, enabling them to excel in software development and competitive programming.</p>
+
+                <p>The club also hosts coding competitions, hackathons, and coding bootcamps where students can test their skills, collaborate on projects, and innovate in the tech space. It serves as a great way for students to prepare for coding interviews and build a solid portfolio of projects that will enhance their career prospects.</p>
+
+                
+            </div>
+
+            <!-- Third Club Item -->
+            <div class="highlight-card">
+                <h3>Electronics Club</h3>
+                <p>The **Electronics Club** is a vibrant group of students focused on exploring the world of electronics and circuit design. The club works on projects ranging from building simple electronic gadgets to complex circuits for automation. Members of the Electronics Club are involved in various activities like PCB design, microcontroller programming, and sensor-based projects.</p>
+
+                <p>The club is also involved in organizing workshops, seminars, and hands-on sessions that help students improve their practical skills in electronics. Whether it’s creating a home automation system or a robotics project, the Electronics Club encourages students to experiment, innovate, and collaborate to create meaningful technological solutions.</p>
+
+                
+            </div>
+
+            <!-- Fourth Club Item -->
+            <div class="highlight-card">
+                <h3>AI & Machine Learning Club</h3>
+                <p>The **AI & Machine Learning Club** at KIET is dedicated to exploring the world of artificial intelligence, machine learning, and deep learning. The club’s mission is to equip students with the tools and knowledge needed to develop AI-based systems that can solve real-world problems. Through workshops, research, and practical projects, students get an in-depth understanding of algorithms and techniques used in AI.</p>
+
+                <p>Members of the AI & ML Club participate in hackathons, research competitions, and collaborate on projects that span a range of industries such as healthcare, finance, and e-commerce. The club also organizes guest lectures and talks by experts in the field, helping students stay updated with the latest trends and advancements in AI and machine learning.</p>
+
+                
+        </section>
+    </div>
+
+    <footer>
+        <p>KIET Group of Institutions | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+</body>
+</html>

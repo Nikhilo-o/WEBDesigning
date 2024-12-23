@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIET Drama</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FBF6E9; /* Soft off-white */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #5DB996, #118B50); /* Green gradient */
+            color: white;
+            padding: 60px 30px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        header img {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            height: 100px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #118B50; /* Deep Green */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 25px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: #E3F0AF;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?theater,drama') no-repeat center center/cover;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 150px 30px;
+            background-size: cover;
+        }
+
+        .hero h2 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.6rem;
+        }
+
+        /* Drama Highlights Section */
+        .highlights {
+            margin: 50px 0;
+        }
+
+        .highlight-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .highlight-card h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .highlight-card p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .highlight-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #118B50; /* Deep Green */
+            color: white;
+            text-align: center;
+            padding: 30px;
+            box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer a {
+            color: #E3F0AF; /* Soft yellow */
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>KIET Drama</h1>
+        <p>Celebrate the arts with our vibrant drama and cultural performances at KIET</p>
+        <img src="https://mserp.kiet.edu/Images/DEFAULT_BG/default_logo1.png" alt="KIET Logo">
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a> <!-- Home Button -->
+        <a href="sports.html">Sports</a>
+        <a href="innovations.html">Innovations</a>
+        <a href="technical-clubs.html">Technical Clubs</a>
+        <a href="drama.html">Drama</a> <!-- Current Page -->
+    </nav>
+
+    <div class="container">
+        <!-- Drama Highlights Section -->
+        <section class="highlights">
+            <!-- First Event Item -->
+            <div class="highlight-card">
+                <h3>Annual Drama Festival</h3>
+                <p>The **Annual Drama Festival** at KIET is a spectacular celebration of the dramatic arts, featuring performances from students across various genres, including theatre, dance-drama, and street plays. This event brings together budding actors, directors, and behind-the-scenes crew members to showcase their talent and creativity in front of an enthusiastic audience.</p><p>
+
+                    The festival provides a platform for students to express themselves, explore different themes, and experiment with new forms of theatre. With live performances, the event is a highlight of KIET's cultural calendar, where students perform on stage and compete for awards in different categories. It's a vibrant and lively celebration of art, culture, and teamwork.</p>
+                <img src="https://www.kiet.edu/uploads/media/club_gallery_image/3931010.jpg" alt="Drama Festival Image" width="800" height="500">
+            </div>
+
+            <!-- Second Event Item -->
+            <div class="highlight-card">
+                <h3>Theatre Workshops</h3>
+                <p>KIET also hosts a series of **Theatre Workshops** that are open to all students, regardless of experience level. These workshops aim to nurture acting skills, improve stage presence, and teach the fundamentals of theatrical production. They cover a variety of aspects, from voice modulation and improvisation to character development and stagecraft.</p>
+
+                <p>Students can learn from seasoned theatre professionals and take part in group activities that strengthen their performance abilities. These workshops provide a hands-on approach to understanding the dynamics of theatre and are an excellent opportunity for students interested in pursuing a career in the performing arts.</p>
+
+                <img src="https://www.kiet.edu/kiet/assets/frontend/img/auditorium-img2.jpg" alt="Theatre Workshop Image" width="800" height="500">
+            </div>
+
+            <!-- Third Event Item -->
+            <div class="highlight-card">
+                <h3>Street Plays and Skits</h3>
+                <p>In addition to formal stage performances, the **Street Plays** at KIET are an exciting and impactful form of drama. These performances take place in open spaces and focus on social issues, creating a direct connection with the audience. Street plays provide an interactive and engaging way for students to convey important messages, raise awareness about societal problems, and advocate for change.</p>
+
+                <p>With a mix of comedy, drama, and satire, the street play performances at KIET often spark discussions and encourage social consciousness. The students work hard to prepare scripts, choreograph movements, and rehearse to deliver their message in the most creative and impactful way possible.</p>
+
+                <img src="https://www.kiet.edu/uploads/media/club_gallery_image/9341476.jpg" alt="Street Play Image" width="800" height="500">
+            </div>
+
+            <!-- Fourth Event Item -->
+            <div class="highlight-card">
+                <h3>Drama Competitions</h3>
+                <p>Throughout the academic year, KIET organizes several **Drama Competitions**, where students from different departments come together to showcase their theatrical abilities. These competitions are highly anticipated, as they not only promote creativity but also encourage teamwork and collaboration among students.</p>
+
+                <p>The drama competitions feature various formats, such as solo performances, group plays, and even monologues. With a focus on both traditional and modern theatre styles, the competitions provide a platform for students to experiment with different forms of drama, from classical plays to contemporary works. It’s a great opportunity to hone acting skills and gain valuable experience on stage.</p>
+
+                
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>KIET Group of Institutions | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
